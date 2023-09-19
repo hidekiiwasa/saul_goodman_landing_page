@@ -1,0 +1,68 @@
+.titulo-nav h1 {
+    font-size: 4rem;
+    font-family: sg_font;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--branco);
+    -webkit-text-fill-color: rgb(53, 48, 48);
+}
+
+.video h2, .texto-sobre p, .avaliacoes p, .avaliacoes h3, h4, h6 + p {
+    -webkit-text-stroke-color: var(--vermelho);
+    -webkit-text-fill-color: var(--branco);
+    -webkit-text-stroke-width: 1.5px;
+    font-weight: bold;
+}
+
+.titulo-nav p {
+    font-size: 20px;
+}
+
+.video h2 {
+    font-size: 70px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.texto-sobre p {
+    height: 240px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.avaliacoes p, .avaliacoes h3 {
+    font-size: 26px;
+}
+
+.textos-avaliacoes h3 {
+    margin: 10px auto;
+}
+
+h4 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.borda-vermelha {
+    font-size: 30px;
+    color: var(--branco);
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 4rem;
+    font-family: sg_font;
+    text-shadow: 0 0 20px #eeeeee, 0 0 30px #eeeeee, 0 0 40px #eeeeee;
+}
+
+.rodape-centro {
+    text-align: center;
+}
+
+h6 + p {
+    font-size: 40px;
+}
+
+.rodape-centro p:last-child {
+    font-size: 25px;
+    font-weight: bold;
+}

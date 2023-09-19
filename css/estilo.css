@@ -1,0 +1,184 @@
+/* RESET CSS E ETCS*/
+/* Resets do CSS que eu gosto, importações de fonte, gradiente do body e o root com umas cores repetidas*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+    font-family: "sg_font";
+    src: url(../assets/script1-script-casual-normal.ttf);
+}
+
+:root {
+    --branco: rgb(255, 255, 255);
+    --vermelho: rgb(255, 0, 0);
+    --gradiante-amarelo: #ffd503;
+    --gradiante-laranja: #f08b18;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(
+        var(--gradiante-amarelo),
+        var(--gradiante-laranja)
+    );
+}
+
+/* HEADER */
+/* Cabeçalho com a logo na esquerda, centro com o título e uma imagem do Saul na direita. Usei um display flex pra deixar tudo alinhado e "deitado", junto com um space-between pra deixar
+um elemento em cada canto */
+
+header {
+    background-image: linear-gradient(
+        var(--gradiante-laranja) 10%,
+        var(--gradiante-amarelo) 90%
+    );
+    height: 260px;
+    border-bottom: 20px solid var(--vermelho);
+    border-top: 20px solid var(--vermelho);
+    padding: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav img {
+    width: 210px;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.titulo-nav {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.balanca {
+    scale: 1.8;
+    margin: 15px 0 20px 0;
+}
+
+/* MAIN */
+/* A parte com todo o conteúdo do site, começando com o comercial do Saul, depois uns textos que usei pra deixar um texto-imagem ou imagem-texto um do lado do outro
+os SERVICES eu realmente não sabia o que colocar então deixei vazio. Continuando pra baixo tem um article com uma avaliação e termina com um marketing*/
+
+.video {
+    margin: 50px auto;
+    max-width: 1280px;
+}
+
+    /* TEXTO SOBRE SAUL */
+
+.secao-sobre {
+    height: 385px;
+    border: 3px solid var(--branco);
+    display: flex;
+}
+
+section, article {
+    margin: 50px auto;
+    max-width: 1280px;
+}
+.secao-sobre img {
+    width: 400px;
+}
+
+.caixas-servicos {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.caixa {
+    border: 1px solid var(--vermelho);
+}
+
+.conteudo-sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.flex-reverso {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+    /* AVALIAÇÃO DO CLIENTE */
+
+.fotos-borradas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.fotos-borradas img{
+    width: 250px;
+}
+
+.textos-avaliacoes {
+    text-align: center;
+}
+
+.cinco-estrelas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cinco-estrelas img {
+    height: 200px;
+    scale: 1.8;
+}
+
+    /* ULTIMA SEÇÃO COM A FRASE DE EFEITO */
+
+figure img{
+    width: 600px;
+    margin-top: 20px;
+}
+
+section:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* FOOTER */
+/* Rodapé bem simples, só um número, o projeto inteiro usei flex para alinhar as coisas, aqui não foi diferente */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background-image: linear-gradient(
+        var(--gradiante-amarelo),
+        #f0c818
+    );
+}
+
+.borda-vermelha {
+    width: 100%;
+    background-color: rgb(255, 39, 39);
+    text-align: center;
+}
