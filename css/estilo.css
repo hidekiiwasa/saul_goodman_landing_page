@@ -34,6 +34,8 @@ body {
 /* HEADER */
 /* Cabeçalho com a logo na esquerda, centro com o título e uma imagem do Saul na direita. Usei um display flex pra deixar tudo alinhado e "deitado", junto com um space-between pra deixar
 um elemento em cada canto */
+/* Como não tinha espaço para botar o menu hamburguer, eu tive que deixar ele somente para o mobile, coloquei um media para tirar tudo do cabeçalho e deixar somente o menu. Quando
+tiver que deixar responsivo eu boto a logo de volta junto, mas realmente não tinha como botar o menu */
 
 header {
     background-image: linear-gradient(
@@ -45,33 +47,49 @@ header {
     border-top: 20px solid var(--vermelho);
     padding: 20px 0 20px 0;
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.none {
+    display: none;
 }
 
-nav img {
-    width: 210px;
-}
+@media(min-width: 1000px) {
+    nav {
+        width: 100%;
+    }
 
-.logo {
-    margin-left: 20px;
-}
 
-.titulo-nav {
-    margin-right: 20px;
-    text-align: center;
-}
+    .none {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .none img {
+        width: 210px;
+    }
+    
+    .logo {
+        margin-left: 20px;
+    }
+    
+    .titulo-nav {
+        margin-right: 20px;
+        text-align: center;
+    }
+    
+    .balanca {
+        scale: 1.8;
+        margin: 15px 0 20px 0;
+    }
 
-.balanca {
-    scale: 1.8;
-    margin: 15px 0 20px 0;
+    .menu {
+        display: none !important;
+    }
 }
 
 /* MAIN */
@@ -122,19 +140,14 @@ section, article {
 
     /* AVALIAÇÃO DO CLIENTE */
 
-.fotos-borradas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.carousel {
+    width: 70%;
+    margin: 0px auto;
 }
-
-.fotos-borradas img{
-    width: 250px;
-}
-
-.textos-avaliacoes {
-    text-align: center;
+    
+.carousel img {
+    height: 60vh;
+    width: 100%;
 }
 
 .cinco-estrelas {

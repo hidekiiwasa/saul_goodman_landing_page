@@ -37,7 +37,12 @@
     margin: 10px auto;
 }
 
-h4 {
+.avaliacoes-titulo {
+    font-size: 40px;
+    text-align: center;
+}
+
+.frase-de-efeito {
     font-size: 40px;
     text-align: center;
 }
@@ -48,7 +53,7 @@ h4 {
     font-weight: bold;
 }
 
-h6 {
+.bcs {
     font-size: 4rem;
     font-family: sg_font;
     text-shadow: 0 0 20px #eeeeee, 0 0 30px #eeeeee, 0 0 40px #eeeeee;
@@ -58,7 +63,7 @@ h6 {
     text-align: center;
 }
 
-h6 + p {
+.bcs + p {
     font-size: 40px;
 }
 
