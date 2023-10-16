@@ -13,14 +13,12 @@
     --gradiante-amarelo: #ffd503;
     --gradiante-laranja: #f08b18;
 }
-*, *::after, *::before {
-    box-sizing: border-box;
-}
 
 * {
     margin: 0;
     padding: 0;
     font: inherit;
+    box-sizing: border-box;
 }
 
 body {
@@ -56,54 +54,29 @@ header {
     display: none;
 }
 
-@media(min-width: 1000px) {
-    nav {
-        width: 100%;
-    }
-
-
-    .none {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .none img {
-        width: 210px;
-    }
-    
-    .logo {
-        margin-left: 20px;
-    }
-    
-    .titulo-nav {
-        margin-right: 20px;
-        text-align: center;
-    }
-    
-    .balanca {
-        scale: 1.8;
-        margin: 15px 0 20px 0;
-    }
-
-    .menu {
-        display: none !important;
-    }
-}
-
 /* MAIN */
 /* A parte com todo o conteúdo do site, começando com o comercial do Saul, depois uns textos que usei pra deixar um texto-imagem ou imagem-texto um do lado do outro
 os SERVICES eu realmente não sabia o que colocar então deixei vazio. Continuando pra baixo tem um article com uma avaliação e termina com um marketing*/
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .video {
-    margin: 50px auto;
-    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
     height: 700px;
 }
 
 iframe {
-    width: 100%;
+    width: 80%;
     height: 80%;
 }
 
@@ -116,27 +89,31 @@ iframe {
 }
 
 section, article {
-    margin: 50px auto;
+    margin: 50px 0 50px 0;
     max-width: 1280px;
+    width: 70%;
 }
-.secao-sobre img {
+
+.img-sobre img {
     width: 400px;
+    height: 100%;
 }
 
 .caixas-servicos {
     display: flex;
-    gap: 10px;
     justify-content: center;
 }
 
 .caixa {
     border: 1px solid var(--vermelho);
+    background-color: var(--vermelho);
+    padding: 5px;
 }
 
 .conteudo-sobre {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .flex-reverso {
@@ -147,7 +124,7 @@ section, article {
     /* AVALIAÇÃO DO CLIENTE */
 
 .carousel {
-    width: 70%;
+    width: 60%;
     margin: 0px auto;
 }
     
@@ -160,6 +137,7 @@ section, article {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    margin-bottom: -3rem;
 }
 
 .cinco-estrelas img {
@@ -190,6 +168,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    width: 100%;
     background-image: linear-gradient(
         var(--gradiante-amarelo),
         #f0c818
@@ -200,4 +179,141 @@ footer {
     width: 100%;
     background-color: rgb(255, 39, 39);
     text-align: center;
+}
+/* MEDIA QUERIES */
+
+@media(min-width: 510px) {
+    nav {
+        width: 100%;
+    }
+
+    .none {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .none img {
+        width: 210px;
+    }
+    
+    .logo {
+        margin-left: 20px;
+    }
+    
+    .titulo-nav {
+        text-align: center;
+    }
+    
+    .balanca {
+        scale: 1.8;
+        margin: 10px 0 20px 0;
+    }
+
+    .menu {
+        display: none !important;
+    }
+}
+
+@media(max-width: 1050px) { 
+
+    header {
+        height: 200px;
+    }
+
+    .none img {
+        width: 160px;
+    }
+
+    .balanca {
+        margin: 0 0 10px 0;
+        scale: 1.4;
+    }
+
+    .secao-sobre img{
+        width: 300px;
+        object-fit: cover;
+    }
+}
+
+@media(max-width: 915px) {
+
+    .video {
+        width: 60%;
+    }
+
+    iframe {
+        width: 70%;
+        height: 60%;
+    }
+
+    .conteudo-sobre {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-bottom: 20px;
+    }
+
+    .secao-sobre {
+        height: 700px;
+        width: 300px;
+        flex-direction: column;
+    }
+
+    .img-sobre {
+        order: -1;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    figure img {
+        width: 400px;
+    }
+}
+
+@media(max-width: 700px) {
+    header {
+        height: 164px;
+    }
+
+    .none img {
+        width: 130px;
+    }
+
+    .balanca {
+        margin: 0 0 5px 0;
+        scale: 1.4;
+    }
+}
+
+@media(max-width: 500px) {
+    .video {
+        width: 70%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 60%;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+
+}
+
+@media(max-width: 420px) {
+    figure img {
+        width: 250px;
+    }
+
+    .cinco-estrelas img {
+        height: 100px;
+        scale: 2;
+    }
 }

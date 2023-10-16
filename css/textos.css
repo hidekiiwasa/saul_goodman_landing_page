@@ -18,7 +18,7 @@
 }
 
 .video h2 {
-    font-size: 70px;
+    font-size: 4.3rem;
     text-align: center;
     padding-bottom: 20px;
 }
@@ -29,12 +29,14 @@
     font-size: 30px;
 }
 
-.avaliacoes p, .avaliacoes h3 {
-    font-size: 26px;
+.caixa a {
+    font-family: sg_font;
+    text-decoration: none;
+    color: var(--branco);
 }
 
-.textos-avaliacoes h3 {
-    margin: 10px auto;
+.carousel {
+    font-size: 26px;
 }
 
 .avaliacoes-titulo {
@@ -70,4 +72,74 @@
 .rodape-centro p:last-child {
     font-size: 25px;
     font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width: 1310px) {
+    .texto-sobre p {
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width: 1110px) {
+    .titulo-nav p {
+        margin-bottom: 0;
+    }
+
+
+    .carousel-texto {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 1050px) {
+    .titulo-nav h1{
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width: 915px) {
+    .video h2 {
+        font-size: 3.5rem;
+    }
+
+    .borda-vermelha {
+        font-size: 1.6rem;
+    }
+
+    .bcs {
+        font-size: 3rem;
+    }
+
+    .bcs + p {
+        font-size: 30px;
+    }
+
+    .rodape-centro p:last-child {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+@media(max-width: 700px) {
+    .titulo-nav h1{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .video h2 {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 420px) {
+    .video h2 {
+        font-size: 2.2rem;
+    }
+
+    .frase-de-efeito {
+        font-size: 2rem;
+    }
 }
