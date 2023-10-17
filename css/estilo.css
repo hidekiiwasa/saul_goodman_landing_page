@@ -308,6 +308,10 @@ footer {
 }
 
 @media(max-width: 420px) {
+    .carousel img {
+        height: 50vh;
+    }
+
     figure img {
         width: 250px;
     }
